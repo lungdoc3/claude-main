@@ -97,6 +97,26 @@ Worth noting that the movie ends at the pump. Everybody tells the breakthrough s
 
 ---
 
+## The First Subjects
+
+Randy is a poor test subject at both ends. Ceiling on the felt sense (decades of ayahuasca work, breathwork, thousands of deaths at the bedside) and floor on predictability (he follows energy rather than clock time, and names the drive to not be predictably predictable as the strongest force in his life). Every design decision in this folder so far has been calibrated against an atypical instrument.
+
+**Del is the felt-sense naive subject.** Not as a convenience sample standing in for an ordinary user, but as n = 1 of the actual clinical target. Special operations culture systematically trains people to override interoceptive signal: push through it, ignore it, function anyway. That override is part of what Operator Syndrome is. A subject from that world is the population `Claude Brain/` and APEX already exist to serve.
+
+The symmetry is worth noticing. Del was the test case for whether the Quadriune framework was teachable. He is now the test case for whether the felt sense is. Same man, both proofs of concept.
+
+**Randy's son is the truer sample.** Del is adjacent to the population. His son is in it: active Green Beret, Harvard physics, five languages. Two subjects at different distances from the target is better design than either alone. Del is the builder who has to hold the model in his head. His son is the operator the model is ultimately about.
+
+One thing to watch on the vocabulary bottleneck. Physics training and five languages mean unusually high verbal precision available for a channel he may be entirely naive to. High linguistic capacity paired with low interoceptive vocabulary is a combination none of the traditions describe, and it may produce handles that are articulate and wrong, which is harder to detect than handles that are absent.
+
+**Label all of it honestly.** Neither man is blind to the hypothesis, both care about Randy, and both will want to give good data. That makes them design probes, not evidence. Design probes from inside the target population are still worth a great deal, and worth more than another iteration calibrated against Randy's own interior.
+
+**And name the thing that makes his son different from any other subject.** What this system measures is degradation under load, in a profession where degradation kills people. Randy is not a neutral investigator there. Decide in advance what happens if the instrument says something he does not want to know, because that decision should not get made for the first time while looking at the data.
+
+**What this implies for scope.** Write down who the system is not for. Most people have grooves and a baseline exists for them. Randy may be outside the population his own delta engine assumes, and naming that boundary now beats discovering it in a trial later.
+
+---
+
 ## The Method
 
 Two existing bodies of work, developed on separate tracks, that fit together.
@@ -147,7 +167,7 @@ The loop that turns the monitor into a teacher, rewritten after the correction s
 
 5. **The authority gradient.** When the system says performance is drifting and the carbon system disagrees, who wins? Aviation had to answer this after crews died deferring to captains who were wrong. The answer shapes the interface.
 
-6. **Where the body enters the Quadriune model.** The reptilian layer in `Claude Brain/` does threat and survival with no afferent body attached to it. The somatic channel may be the missing input, which would make these two projects one project.
+6. **Where the body enters the Quadriune model.** The reptilian layer in `Claude Brain/` does threat and survival with no afferent body attached to it. The somatic channel may be the missing input, which would make these two projects one project. **The populations may also converge:** APEX targets Operator Syndrome in special operations forces, and trained interoceptive override is part of that picture. If the somatic work serves the same people, these are one project on two axes rather than two projects sharing an architecture.
 
 7. **Has anyone put physiological instrumentation on Focusing sessions?** **ANSWERED: no.** Verified absence across English and Japanese sources, TIFI's own research pages, and its roughly 100-dissertation database spanning 13 countries and 1971 to 2024. The systematic review of interpersonal physiology in psychotherapy does not mention Gendlin, Focusing, or experiential therapy at all. The two literatures have never intersected. Exceptions: Gendlin & Berlin 1961 (GSR, N = 17, never replicated), its unpublished companion, one unverified 1977 EEG report, and Rieko Kurino in Japan, the only active researcher on this. The study is small, cheap and fundable. See `best-practice-survey.md` section 6.
 
