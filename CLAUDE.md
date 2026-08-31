@@ -28,6 +28,12 @@ Filing rules. Follow them without asking. They exist so that nothing has to be r
 - Scratch files and intermediate output do not belong in these folders.
 - When any file's absolute path changes, grep the whole tree for the old path in that same session and fix every hit before finishing.
 
+This folder is a git repository. The documents are versioned; media and archived
+source material are excluded by `.gitignore` and live only on the machine they
+are on. At the end of a working session, commit with a message that says what
+changed and why, then push. On the other machine, pull before starting. Randy
+does not run these commands. Whichever Claude is working here does.
+
 ---
 
 ## Writing
