@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Self Wall</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1714;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 30px 0 60px;
+  }
+
+  .title-block {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.6;
+  }
+
+  .wall {
+    position: relative;
+    width: 960px;
+    height: 1320px;
+    background-color: #2e2924;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.03) 3px, rgba(0,0,0,0.03) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,0.03) 3px, rgba(0,0,0,0.03) 4px);
+    box-shadow: inset 0 0 120px rgba(0,0,0,0.5), 0 0 40px rgba(0,0,0,0.8);
+    overflow: hidden;
+    border: 1px solid #111;
+  }
+
+  /* Grime / wear layers */
+  .wall::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,200,100,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(100,150,255,0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(0,0,0,0.15) 100%);
+    pointer-events: none;
+    z-index: 200;
+  }
+
+  .sticker {
+    position: absolute;
+    font-family: Arial Black, Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: default;
+    transition: transform 0.15s ease, z-index 0s;
+  }
+
+  .sticker:hover {
+    z-index: 100 !important;
+    filter: brightness(1.15);
+  }
+
+  /* Size variants */
+  .s-xxl { font-size: 36px; padding: 14px 26px; }
+  .s-xl  { font-size: 26px; padding: 11px 20px; }
+  .s-lg  { font-size: 19px; padding: 9px 15px; }
+  .s-md  { font-size: 14px; padding: 7px 12px; }
+  .s-sm  { font-size: 11px; padding: 5px 9px; }
+
+  /* Color schemes */
+  .c-red    { background: #c41e1e; color: #fff; }
+  .c-crimson{ background: #7a0000; color: #f0c8c8; }
+  .c-black  { background: #111111; color: #f0ede5; }
+  .c-white  { background: #f0ede5; color: #111; border: 2px solid #333; }
+  .c-yellow { background: #f0c800; color: #111; }
+  .c-orange { background: #c84800; color: #fff; }
+  .c-teal   { background: #1a6b5a; color: #d0ede8; }
+  .c-navy   { background: #1a2f5e; color: #c8d8f0; }
+  .c-grey   { background: #4a4640; color: #c8c0b8; opacity: 0.72; }
+  .c-cream  { background: #ddd5b8; color: #2a2215; border: 1.5px solid #a09070; }
+  .c-hot    { background: #e0003c; color: #fff; }
+  .c-lime   { background: #7aaa00; color: #111; }
+  .c-purple { background: #4a1a7a; color: #ddc8f5; }
+  .c-rust   { background: #8a3200; color: #f0d0b8; }
+  .c-ink    { background: #0d1a2e; color: #88aacc; border: 1px solid #334; }
+
+  /* Shape variants */
+  .r-rect   { border-radius: 3px; }
+  .r-round  { border-radius: 8px; }
+  .r-pill   { border-radius: 100px; }
+  .r-sharp  { border-radius: 0; }
+  .r-torn   { border-radius: 2px 8px 3px 7px; }
+
+  /* Wear effects */
+  .worn     { opacity: 0.68; filter: saturate(0.7); }
+  .fresh    { box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+  .peel     { box-shadow: 2px 3px 10px rgba(0,0,0,0.6); border-radius: 3px 4px 2px 8px; }
+  .flat     { box-shadow: none; }
+</style>
+</head>
+<body>
+
+<div class="title-block">The Default Mode Network &nbsp;|&nbsp; Working Draft</div>
+
+<div class="wall" id="wall"></div>
+
+<script>
+const stickers = [
+  // ── ROW 1 (y 15–80) ──────────────────────────────────────────────────────
+  { t:'SELF-DOUBT',        x:18,  y:22,  rot:-11, s:'xl',  c:'red',    r:'peel',  w:'fresh' },
+  { t:'SELF-LOATHING',     x:185, y:10,  rot:6,   s:'lg',  c:'black',  r:'rect',  w:'fresh' },
+  { t:'SELF-WORTH',        x:370, y:18,  rot:-4,  s:'xl',  c:'yellow', r:'round', w:'fresh' },
+  { t:'SELF-IMAGE',        x:560, y:8,   rot:8,   s:'lg',  c:'cream',  r:'torn',  w:'' },
+  { t:'SELF-CARE',         x:710, y:20,  rot:-6,  s:'xl',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-PRESERVATION', x:840, y:12,  rot:9,   s:'md',  c:'navy',   r:'rect',  w:'' },
+
+  // ── ROW 2 (y 90–160) ──────────────────────────────────────────────────────
+  { t:'SELF-DESTRUCTION',  x:12,  y:95,  rot:-8,  s:'xl',  c:'crimson',r:'sharp', w:'peel' },
+  { t:'SELF-SABOTAGE',     x:210, y:88,  rot:4,   s:'lg',  c:'red',    r:'rect',  w:'fresh' },
+  { t:'SELF-ESTEEM',       x:388, y:98,  rot:-6,  s:'xl',  c:'yellow', r:'round', w:'fresh' },
+  { t:'SELF-REGULATION',   x:590, y:90,  rot:11,  s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-RIGHTEOUS',    x:740, y:96,  rot:-3,  s:'lg',  c:'black',  r:'sharp', w:'worn' },
+  { t:'SELF-RELIANCE',     x:872, y:88,  rot:7,   s:'md',  c:'ink',    r:'rect',  w:'' },
+
+  // ── ROW 3 (y 165–240) ─────────────────────────────────────────────────────
+  { t:'SELF-AWARENESS',    x:20,  y:170, rot:7,   s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-DECEPTION',    x:185, y:162, rot:-9,  s:'lg',  c:'black',  r:'rect',  w:'peel' },
+  { t:'SELF-CONTROL',      x:362, y:172, rot:3,   s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-ACTUALIZATION',x:490, y:165, rot:-12, s:'lg',  c:'cream',  r:'round', w:'' },
+  { t:'SELF-CENTERED',     x:718, y:170, rot:6,   s:'xl',  c:'orange', r:'sharp', w:'fresh' },
+  { t:'SELF-LIMITING',     x:868, y:162, rot:-5,  s:'md',  c:'crimson',r:'rect',  w:'worn' },
+
+  // ── ROW 4 (y 245–320) ─────────────────────────────────────────────────────
+  { t:'SELF-COMPASSION',   x:14,  y:252, rot:-4,  s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-CRITICISM',    x:198, y:244, rot:8,   s:'lg',  c:'red',    r:'peel',  w:'fresh' },
+  { t:'SELF-FULFILLING',   x:368, y:252, rot:-7,  s:'md',  c:'black',  r:'rect',  w:'worn' },
+  { t:'SELF-REFLECTION',   x:520, y:246, rot:5,   s:'lg',  c:'cream',  r:'torn',  w:'' },
+  { t:'SELF-IMPORTANT',    x:718, y:250, rot:-10, s:'lg',  c:'orange', r:'rect',  w:'fresh' },
+  { t:'SELF-HARM',         x:876, y:244, rot:3,   s:'xl',  c:'crimson',r:'sharp', w:'peel' },
+
+  // ── ROW 5 (y 325–400) ─────────────────────────────────────────────────────
+  { t:'SELF-CONCEPT',      x:22,  y:332, rot:9,   s:'md',  c:'yellow', r:'round', w:'' },
+  { t:'SELF-MEDICATION',   x:156, y:325, rot:-5,  s:'lg',  c:'black',  r:'rect',  w:'worn' },
+  { t:'SELF-KNOWLEDGE',    x:348, y:332, rot:6,   s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-EXAMINATION',  x:498, y:326, rot:-8,  s:'lg',  c:'cream',  r:'round', w:'' },
+  { t:'SELF-AGGRANDIZEMENT',x:695,y:330, rot:4,   s:'md',  c:'red',    r:'sharp', w:'fresh' },
+  { t:'SELF-APPOINTED',    x:852, y:325, rot:-7,  s:'md',  c:'grey',   r:'rect',  w:'worn' },
+
+  // ── ROW 6 (y 405–480) ─────────────────────────────────────────────────────
+  { t:'SELF-INQUIRY',      x:16,  y:412, rot:7,   s:'md',  c:'teal',   r:'round', w:'' },
+  { t:'SELF-TALK',         x:162, y:406, rot:-3,  s:'xl',  c:'yellow', r:'pill',  w:'fresh' },
+  { t:'SELF-DEFENSE',      x:344, y:412, rot:10,  s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-ABSORBED',     x:488, y:405, rot:-6,  s:'xl',  c:'hot',    r:'sharp', w:'fresh' },
+  { t:'SELF-ACCEPTANCE',   x:692, y:410, rot:4,   s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-INFLICTED',    x:856, y:405, rot:-9,  s:'md',  c:'crimson',r:'torn',  w:'peel' },
+
+  // ── ROW 7 (y 485–560) ─────────────────────────────────────────────────────
+  { t:'SELF-PROCLAIMED',   x:10,  y:492, rot:6,   s:'md',  c:'orange', r:'rect',  w:'' },
+  { t:'SELF-NARRATIVE',    x:178, y:485, rot:-9,  s:'lg',  c:'black',  r:'rect',  w:'worn' },
+  { t:'SELF-DISCIPLINE',   x:360, y:492, rot:3,   s:'lg',  c:'navy',   r:'sharp', w:'fresh' },
+  { t:'SELF-DELUSION',     x:548, y:484, rot:-7,  s:'xl',  c:'crimson',r:'peel',  w:'peel' },
+  { t:'SELF-MASTERY',      x:752, y:490, rot:8,   s:'md',  c:'teal',   r:'round', w:'' },
+  { t:'SELF-SUFFICIENCY',  x:860, y:484, rot:-4,  s:'md',  c:'cream',  r:'rect',  w:'worn' },
+
+  // ── ROW 8 (y 565–640) ─────────────────────────────────────────────────────
+  { t:'SELF-EXPRESSION',   x:16,  y:572, rot:-5,  s:'lg',  c:'orange', r:'round', w:'fresh' },
+  { t:'SELF-DEFEATING',    x:208, y:564, rot:9,   s:'lg',  c:'red',    r:'rect',  w:'fresh' },
+  { t:'SELF-DISCOVERY',    x:400, y:572, rot:-3,  s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-SERVING',      x:588, y:565, rot:7,   s:'lg',  c:'crimson',r:'sharp', w:'' },
+  { t:'SELF-EMPOWERMENT',  x:740, y:572, rot:-6,  s:'md',  c:'lime',   r:'round', w:'fresh' },
+  { t:'SELF-STYLED',       x:882, y:565, rot:4,   s:'md',  c:'cream',  r:'torn',  w:'worn' },
+
+  // ── ROW 9 (y 645–720) ─────────────────────────────────────────────────────
+  { t:'SELF-DENIAL',       x:22,  y:650, rot:-6,  s:'lg',  c:'black',  r:'rect',  w:'peel' },
+  { t:'SELF-REALIZATION',  x:200, y:644, rot:3,   s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-REPRESSION',   x:400, y:650, rot:-8,  s:'lg',  c:'crimson',r:'rect',  w:'worn' },
+  { t:'SELF-PROMOTION',    x:590, y:644, rot:5,   s:'md',  c:'orange', r:'sharp', w:'' },
+  { t:'SELF-ADVOCACY',     x:726, y:650, rot:-3,  s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-SCHEMA',       x:852, y:644, rot:8,   s:'sm',  c:'grey',   r:'rect',  w:'worn' },
+
+  // ── ROW 10 (y 725–800) ────────────────────────────────────────────────────
+  { t:'SELF-COMPARISON',   x:14,  y:730, rot:-7,  s:'md',  c:'yellow', r:'round', w:'' },
+  { t:'SELF-MONITORING',   x:188, y:724, rot:8,   s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-DEVELOPMENT',  x:352, y:730, rot:-4,  s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-SUPPRESSION',  x:548, y:724, rot:6,   s:'xl',  c:'crimson',r:'sharp', w:'peel' },
+  { t:'SELF-ASSESSMENT',   x:752, y:730, rot:-9,  s:'md',  c:'black',  r:'rect',  w:'worn' },
+  { t:'SELF-IMPROVEMENT',  x:866, y:724, rot:3,   s:'md',  c:'cream',  r:'torn',  w:'' },
+
+  // ── ROW 11 (y 805–880) ────────────────────────────────────────────────────
+  { t:'SELF-TRANSCENDENCE',x:10,  y:812, rot:7,   s:'lg',  c:'purple', r:'round', w:'fresh' },
+  { t:'SELF-MADE',         x:240, y:808, rot:-5,  s:'xl',  c:'black',  r:'sharp', w:'fresh' },
+  { t:'SELF-HELP',         x:414, y:812, rot:9,   s:'xxl', c:'yellow', r:'rect',  w:'fresh' },
+  { t:'SELF-CONTINUITY',   x:622, y:808, rot:-4,  s:'md',  c:'rust',   r:'rect',  w:'worn' },
+  { t:'SELF-RIGHTEOUSNESS',x:770, y:812, rot:6,   s:'md',  c:'red',    r:'rect',  w:'' },
+  { t:'SELF-CENSORSHIP',   x:876, y:808, rot:-8,  s:'sm',  c:'grey',   r:'torn',  w:'worn' },
+
+  // ── ROW 12 (y 885–960) ────────────────────────────────────────────────────
+  { t:'SELF-FORGIVENESS',  x:18,  y:892, rot:-4,  s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-TAUGHT',       x:222, y:886, rot:8,   s:'md',  c:'cream',  r:'rect',  w:'' },
+  { t:'SELF-DETERMINATION',x:382, y:892, rot:3,   s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-PERPETUATING', x:558, y:886, rot:-6,  s:'md',  c:'orange', r:'rect',  w:'worn' },
+  { t:'SELF-GOVERNANCE',   x:730, y:892, rot:5,   s:'md',  c:'navy',   r:'rect',  w:'' },
+  { t:'SELF-PRESERVATION', x:868, y:886, rot:-3,  s:'md',  c:'ink',    r:'rect',  w:'' },
+
+  // ── ROW 13 (y 965–1040) ───────────────────────────────────────────────────
+  { t:'SELF-LOVE',         x:22,  y:972, rot:-6,  s:'xl',  c:'hot',    r:'round', w:'fresh' },
+  { t:'SELF-CONSCIOUS',    x:210, y:966, rot:9,   s:'lg',  c:'cream',  r:'torn',  w:'' },
+  { t:'SELF-DISCLOSURE',   x:408, y:972, rot:-8,  s:'md',  c:'black',  r:'rect',  w:'worn' },
+  { t:'SELF-REFERENTIAL',  x:566, y:966, rot:4,   s:'md',  c:'grey',   r:'rect',  w:'worn' },
+  { t:'SELF-RESPECT',      x:718, y:972, rot:-5,  s:'lg',  c:'teal',   r:'round', w:'fresh' },
+  { t:'SELF-VERIFICATION', x:862, y:966, rot:7,   s:'sm',  c:'ink',    r:'rect',  w:'worn' },
+
+  // ── ROW 14 / BOTTOM (y 1045–1130) ─────────────────────────────────────────
+  { t:'SELF-DEPRECATION',  x:14,  y:1055, rot:5,  s:'md',  c:'black',  r:'rect',  w:'' },
+  { t:'SELF-CONGRATULATION',x:192,y:1048, rot:-7, s:'md',  c:'yellow', r:'round', w:'worn' },
+  { t:'SELF-INTEREST',     x:438, y:1055, rot:3,  s:'md',  c:'orange', r:'rect',  w:'' },
+  { t:'SELF-PORTRAIT',     x:620, y:1048, rot:-4, s:'md',  c:'cream',  r:'torn',  w:'worn' },
+  { t:'SELF-STARTER',      x:778, y:1055, rot:8,  s:'md',  c:'lime',   r:'round', w:'' },
+  { t:'SELFIE',            x:890, y:1048, rot:-6, s:'lg',  c:'hot',    r:'pill',  w:'fresh' },
+
+  // ── FEATURED CENTREPIECE (y 1140–1240) ────────────────────────────────────
+  { t:'NO-SELF',           x:160, y:1162, rot:-5, s:'xxl', c:'red',    r:'sharp', w:'peel' },
+  { t:'SELF',              x:430, y:1155, rot:2,  s:'xxl', c:'black',  r:'sharp', w:'fresh' },
+  { t:'SELF-LESS',         x:680, y:1162, rot:-3, s:'xl',  c:'teal',   r:'round', w:'fresh' },
+];
+
+const wall = document.getElementById('wall');
+
+stickers.forEach((s, i) => {
+  const el = document.createElement('div');
+  el.className = [
+    'sticker',
+    `s-${s.s}`,
+    `c-${s.c}`,
+    `r-${s.r || 'rect'}`,
+    s.w || ''
+  ].join(' ');
+  el.textContent = s.t;
+  el.style.left = s.x + 'px';
+  el.style.top  = s.y + 'px';
+  el.style.transform = `rotate(${s.rot}deg)`;
+  el.style.zIndex = i + 1;
+  wall.appendChild(el);
+});
+</script>
+</body>
+</html>

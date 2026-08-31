@@ -1,0 +1,41 @@
+# Claude MAIN repository
+#
+# What belongs here: the thinking. Markdown, notes, drafts, structure.
+# What stays out: heavy media and archived source material. Those live on
+# whichever machine they live on and get moved deliberately, not synced.
+#
+# Rule of thumb: if git would store a new copy of a 50 MB file every time it
+# changed, keep it out.
+
+# macOS noise
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Heavy media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.aiff
+*.m4a
+
+# Large presentation and image assets
+*.pptx
+*.potx
+*.psd
+*.ai
+*.sketch
+
+# Archived source material. 184 docx, 40 pdf and a 52 MB deck of reference
+# documents that never change. Keep them on disk, out of history.
+Claude Book/Legacy sources/
+
+# Temp and lock files
+*.tmp
+*~
+*#
+.~lock.*

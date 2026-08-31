@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Map – How Healing Moves Through the Terrain</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    background: #07071a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<svg viewBox="0 0 960 820" xmlns="http://www.w3.org/2000/svg">
+<defs>
+
+  <!-- Path glow -->
+  <filter id="pathGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+    <feColorMatrix in="blur" type="matrix"
+      values="1 0.6 0 0 0.1  0.7 0.4 0 0 0.05  0 0 0 0 0  0 0 0 1 0" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Node glow -->
+  <filter id="nodeGlow" x="-120%" y="-120%" width="340%" height="340%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"/>
+    <feColorMatrix in="blur" type="matrix"
+      values="1 0.7 0 0 0.2  0.8 0.5 0 0 0.1  0 0 0 0 0  0 0 0 0.75 0" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Big node glow for Contact -->
+  <filter id="bigGlow" x="-150%" y="-150%" width="400%" height="400%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur"/>
+    <feColorMatrix in="blur" type="matrix"
+      values="1 0.8 0 0 0.3  0.9 0.6 0 0 0.15  0 0 0 0 0  0 0 0 0.9 0" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Subtle background stars -->
+  <pattern id="stars" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+    <circle cx="18"  cy="32"  r="0.6" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="60"  cy="12"  r="0.8" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="95"  cy="65"  r="0.5" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="40"  cy="90"  r="0.7" fill="rgba(255,255,255,0.07)"/>
+    <circle cx="105" cy="22"  r="0.5" fill="rgba(255,255,255,0.09)"/>
+    <circle cx="8"   cy="100" r="0.6" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="75"  cy="105" r="0.5" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="50"  cy="55"  r="0.4" fill="rgba(255,255,255,0.06)"/>
+  </pattern>
+
+  <!-- Strata grain textures -->
+  <pattern id="g1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="6" x2="6" y2="0" stroke="rgba(80,130,220,0.07)" stroke-width="0.6"/>
+  </pattern>
+  <pattern id="g2" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="6" x2="6" y2="0" stroke="rgba(130,80,220,0.07)" stroke-width="0.6"/>
+  </pattern>
+  <pattern id="g3" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="6" x2="6" y2="0" stroke="rgba(100,70,200,0.08)" stroke-width="0.6"/>
+  </pattern>
+  <pattern id="g4" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="6" x2="6" y2="0" stroke="rgba(70,50,160,0.09)" stroke-width="0.6"/>
+  </pattern>
+
+  <!-- Core radial glow -->
+  <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="rgba(210,165,55,0.18)"/>
+    <stop offset="60%"  stop-color="rgba(210,165,55,0.06)"/>
+    <stop offset="100%" stop-color="rgba(210,165,55,0)"/>
+  </radialGradient>
+
+  <!-- Path colour gradient left→right -->
+  <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#b8943c"/>
+    <stop offset="50%"  stop-color="#f0d478"/>
+    <stop offset="100%" stop-color="#b8943c"/>
+  </linearGradient>
+
+</defs>
+
+<!-- ── BACKGROUND ── -->
+<rect width="960" height="820" fill="#07071a"/>
+<rect width="960" height="820" fill="url(#stars)"/>
+
+<!-- ── TITLE ── -->
+<text x="480" y="36" text-anchor="middle"
+  font-family="Georgia, serif" font-size="10" letter-spacing="5"
+  fill="rgba(200,168,76,0.55)">HEALING WITH PSYCHEDELICS</text>
+<text x="480" y="70" text-anchor="middle"
+  font-family="Georgia, serif" font-size="36" letter-spacing="10"
+  fill="#ead88a">THE MAP</text>
+<text x="480" y="90" text-anchor="middle"
+  font-family="Georgia, serif" font-size="11" letter-spacing="2"
+  fill="rgba(190,190,220,0.45)" font-style="italic">How Healing Moves Through the Terrain</text>
+<line x1="310" y1="104" x2="650" y2="104" stroke="rgba(200,168,76,0.25)" stroke-width="0.5"/>
+
+<!-- ── FOUNDATION LAYERS ──
+     Layer 1: y 114–224   (110px)
+     Layer 2: y 224–344   (120px)
+     Layer 3: y 344–464   (120px)
+     Layer 4: y 464–590   (126px)
+     Core:    y 590–680   ( 90px)
+-->
+
+<!-- F1 – Your Brain -->
+<rect x="60" y="114" width="840" height="110" fill="#0e1e3c"/>
+<rect x="60" y="114" width="840" height="110" fill="url(#g1)"/>
+<rect x="60" y="114" width="840" height="110" fill="none" stroke="rgba(70,110,200,0.14)" stroke-width="0.5"/>
+<text x="85" y="150" font-family="Georgia, serif" font-size="8.5" letter-spacing="3.5"
+  fill="rgba(110,155,230,0.55)">FOUNDATION 1</text>
+<text x="85" y="170" font-family="Georgia, serif" font-size="16" letter-spacing="1.5"
+  fill="rgba(150,195,255,0.78)">Your Brain</text>
+<text x="85" y="186" font-family="Georgia, serif" font-size="9" letter-spacing="0.5"
+  fill="rgba(110,155,220,0.42)" font-style="italic">The Hardware · Survival. Prediction. Plasticity.</text>
+<line x1="60" y1="224" x2="900" y2="224" stroke="rgba(80,110,195,0.22)" stroke-width="0.8"/>
+
+<!-- F2 – Your Programming -->
+<rect x="60" y="224" width="840" height="120" fill="#140d38"/>
+<rect x="60" y="224" width="840" height="120" fill="url(#g2)"/>
+<rect x="60" y="224" width="840" height="120" fill="none" stroke="rgba(120,75,200,0.12)" stroke-width="0.5"/>
+<text x="85" y="260" font-family="Georgia, serif" font-size="8.5" letter-spacing="3.5"
+  fill="rgba(150,95,230,0.55)">FOUNDATION 2</text>
+<text x="85" y="280" font-family="Georgia, serif" font-size="16" letter-spacing="1.5"
+  fill="rgba(180,140,255,0.78)">Your Programming</text>
+<text x="85" y="296" font-family="Georgia, serif" font-size="9" letter-spacing="0.5"
+  fill="rgba(150,95,220,0.42)" font-style="italic">The Firmware · Critical periods. Early code. Body memory.</text>
+<line x1="60" y1="344" x2="900" y2="344" stroke="rgba(100,70,180,0.2)" stroke-width="0.8"/>
+
+<!-- F3 – Your Perception -->
+<rect x="60" y="344" width="840" height="120" fill="#100b2e"/>
+<rect x="60" y="344" width="840" height="120" fill="url(#g3)"/>
+<rect x="60" y="344" width="840" height="120" fill="none" stroke="rgba(90,65,175,0.12)" stroke-width="0.5"/>
+<text x="85" y="380" font-family="Georgia, serif" font-size="8.5" letter-spacing="3.5"
+  fill="rgba(130,85,215,0.55)">FOUNDATION 3</text>
+<text x="85" y="400" font-family="Georgia, serif" font-size="16" letter-spacing="1.5"
+  fill="rgba(160,130,245,0.78)">Your Perception</text>
+<text x="85" y="416" font-family="Georgia, serif" font-size="9" letter-spacing="0.5"
+  fill="rgba(130,85,205,0.42)" font-style="italic">The Filter · What gets through. What gets cut.</text>
+<line x1="60" y1="464" x2="900" y2="464" stroke="rgba(75,55,155,0.2)" stroke-width="0.8"/>
+
+<!-- F4 – Your Story of You -->
+<rect x="60" y="464" width="840" height="126" fill="#090720"/>
+<rect x="60" y="464" width="840" height="126" fill="url(#g4)"/>
+<rect x="60" y="464" width="840" height="126" fill="none" stroke="rgba(75,50,140,0.15)" stroke-width="0.5"/>
+<text x="85" y="500" font-family="Georgia, serif" font-size="8.5" letter-spacing="3.5"
+  fill="rgba(115,70,185,0.55)">FOUNDATION 4</text>
+<text x="85" y="520" font-family="Georgia, serif" font-size="16" letter-spacing="1.5"
+  fill="rgba(145,115,225,0.78)">Your Story of You</text>
+<text x="85" y="536" font-family="Georgia, serif" font-size="9" letter-spacing="0.5"
+  fill="rgba(115,70,175,0.42)" font-style="italic">The Narrator · The DMN. Identity. The story that runs.</text>
+<line x1="60" y1="590" x2="900" y2="590" stroke="rgba(55,40,120,0.2)" stroke-width="0.8"/>
+
+<!-- Core / Depths -->
+<rect x="60" y="590" width="840" height="90" fill="#050413"/>
+<ellipse cx="480" cy="650" rx="220" ry="55" fill="url(#coreGlow)"/>
+<text x="480" y="674" text-anchor="middle"
+  font-family="Georgia, serif" font-size="8" letter-spacing="5"
+  fill="rgba(200,168,76,0.22)" font-style="italic">the depths</text>
+
+<!-- Outer border -->
+<rect x="60" y="114" width="840" height="566" fill="none"
+  stroke="rgba(100,90,180,0.18)" stroke-width="1" rx="1"/>
+
+<!-- ── JOURNEY PATH ──
+  Recognition  (190, 168)  Brain layer
+  Access       (235, 404)  Perception layer
+  Contact      (480, 640)  Core
+  Integration  (725, 404)  Perception layer
+  Embodiment   (770, 168)  Brain layer
+-->
+
+<!-- Soft outer glow on path -->
+<path d="M 190,168
+         C 170,300 190,355 235,404
+         C 280,458 385,612 480,640
+         C 575,612 680,458 725,404
+         C 770,355 790,300 770,168"
+  fill="none" stroke="rgba(210,165,55,0.2)" stroke-width="16" stroke-linecap="round"/>
+
+<!-- Path main line -->
+<path d="M 190,168
+         C 170,300 190,355 235,404
+         C 280,458 385,612 480,640
+         C 575,612 680,458 725,404
+         C 770,355 790,300 770,168"
+  fill="none" stroke="url(#pathGrad)" stroke-width="2.5"
+  stroke-linecap="round" filter="url(#pathGlow)"/>
+
+<!-- Directional tick marks on path (simple dashes suggesting flow) -->
+<!-- Left descent – tick near y≈295 -->
+<g transform="translate(179,295) rotate(96)">
+  <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(220,180,70,0.45)" stroke-width="1.2"/>
+  <polygon points="0,-9 3,-3 -3,-3" fill="rgba(220,180,70,0.55)"/>
+</g>
+<!-- Left descent – tick near y≈510 -->
+<g transform="translate(348,516) rotate(65)">
+  <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(220,180,70,0.45)" stroke-width="1.2"/>
+  <polygon points="0,-9 3,-3 -3,-3" fill="rgba(220,180,70,0.55)"/>
+</g>
+<!-- Right ascent – tick near y≈510 -->
+<g transform="translate(612,516) rotate(-65)">
+  <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(220,180,70,0.45)" stroke-width="1.2"/>
+  <polygon points="0,-9 3,-3 -3,-3" fill="rgba(220,180,70,0.55)"/>
+</g>
+<!-- Right ascent – tick near y≈295 -->
+<g transform="translate(781,295) rotate(-96)">
+  <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(220,180,70,0.45)" stroke-width="1.2"/>
+  <polygon points="0,-9 3,-3 -3,-3" fill="rgba(220,180,70,0.55)"/>
+</g>
+
+<!-- ── MOVEMENT NODES ── -->
+
+<!-- ① RECOGNITION  (190, 168) -->
+<circle cx="190" cy="168" r="24" fill="rgba(200,168,76,0.07)" filter="url(#nodeGlow)"/>
+<circle cx="190" cy="168" r="16" fill="none" stroke="rgba(200,168,76,0.38)" stroke-width="1"/>
+<circle cx="190" cy="168" r="10" fill="rgba(200,168,76,0.14)" stroke="rgba(210,178,86,0.82)" stroke-width="1.6"/>
+<text x="190" y="173" text-anchor="middle"
+  font-family="Georgia, serif" font-size="10" fill="#e8c870" font-weight="bold">1</text>
+<!-- Label right -->
+<text x="215" y="160" font-family="Georgia, serif" font-size="12" letter-spacing="2"
+  fill="rgba(225,192,98,0.92)">RECOGNITION</text>
+<text x="215" y="176" font-family="Georgia, serif" font-size="9" font-style="italic"
+  fill="rgba(185,158,82,0.62)">See the terrain</text>
+
+<!-- ② ACCESS  (235, 404) -->
+<circle cx="235" cy="404" r="24" fill="rgba(200,168,76,0.07)" filter="url(#nodeGlow)"/>
+<circle cx="235" cy="404" r="16" fill="none" stroke="rgba(200,168,76,0.38)" stroke-width="1"/>
+<circle cx="235" cy="404" r="10" fill="rgba(200,168,76,0.14)" stroke="rgba(210,178,86,0.82)" stroke-width="1.6"/>
+<text x="235" y="409" text-anchor="middle"
+  font-family="Georgia, serif" font-size="10" fill="#e8c870" font-weight="bold">2</text>
+<!-- Label right -->
+<text x="260" y="396" font-family="Georgia, serif" font-size="12" letter-spacing="2"
+  fill="rgba(225,192,98,0.92)">ACCESS</text>
+<text x="260" y="412" font-family="Georgia, serif" font-size="9" font-style="italic"
+  fill="rgba(185,158,82,0.62)">The door opens</text>
+
+<!-- ③ CONTACT  (480, 640)  – largest node, deepest point -->
+<circle cx="480" cy="640" r="32" fill="rgba(200,168,76,0.1)" filter="url(#bigGlow)"/>
+<circle cx="480" cy="640" r="22" fill="none" stroke="rgba(210,175,70,0.5)" stroke-width="1.3"/>
+<circle cx="480" cy="640" r="14" fill="rgba(200,168,76,0.22)" stroke="rgba(230,190,80,0.92)" stroke-width="2"/>
+<text x="480" y="645" text-anchor="middle"
+  font-family="Georgia, serif" font-size="11" fill="#f2dc80" font-weight="bold">3</text>
+<!-- Label below -->
+<text x="480" y="672" text-anchor="middle"
+  font-family="Georgia, serif" font-size="12" letter-spacing="2"
+  fill="rgba(235,198,100,0.96)">CONTACT</text>
+<text x="480" y="686" text-anchor="middle"
+  font-family="Georgia, serif" font-size="9" font-style="italic"
+  fill="rgba(195,163,85,0.68)">Meet what surfaces</text>
+
+<!-- ④ INTEGRATION WINDOW  (725, 404) -->
+<circle cx="725" cy="404" r="24" fill="rgba(200,168,76,0.07)" filter="url(#nodeGlow)"/>
+<circle cx="725" cy="404" r="16" fill="none" stroke="rgba(200,168,76,0.38)" stroke-width="1"/>
+<circle cx="725" cy="404" r="10" fill="rgba(200,168,76,0.14)" stroke="rgba(210,178,86,0.82)" stroke-width="1.6"/>
+<text x="725" y="409" text-anchor="middle"
+  font-family="Georgia, serif" font-size="10" fill="#e8c870" font-weight="bold">4</text>
+<!-- Label left -->
+<text x="700" y="389" text-anchor="end" font-family="Georgia, serif" font-size="12" letter-spacing="1.5"
+  fill="rgba(225,192,98,0.92)">INTEGRATION</text>
+<text x="700" y="405" text-anchor="end" font-family="Georgia, serif" font-size="9" font-style="italic"
+  fill="rgba(185,158,82,0.62)">Plant in the window</text>
+
+<!-- ⑤ EMBODIMENT  (770, 168)  – slightly more luminous, the return -->
+<circle cx="770" cy="168" r="26" fill="rgba(200,168,76,0.11)" filter="url(#nodeGlow)"/>
+<circle cx="770" cy="168" r="18" fill="none" stroke="rgba(215,182,82,0.5)" stroke-width="1.2"/>
+<circle cx="770" cy="168" r="11" fill="rgba(200,168,76,0.24)" stroke="rgba(228,192,84,0.92)" stroke-width="1.8"/>
+<text x="770" y="173" text-anchor="middle"
+  font-family="Georgia, serif" font-size="10" fill="#f2dc80" font-weight="bold">5</text>
+<!-- Label left -->
+<text x="745" y="153" text-anchor="end" font-family="Georgia, serif" font-size="12" letter-spacing="2"
+  fill="rgba(235,198,100,0.96)">EMBODIMENT</text>
+<text x="745" y="169" text-anchor="end" font-family="Georgia, serif" font-size="9" font-style="italic"
+  fill="rgba(195,163,85,0.68)">The rest of the life</text>
+
+<!-- ── FOOTER ── -->
+<line x1="200" y1="726" x2="760" y2="726" stroke="rgba(100,90,170,0.2)" stroke-width="0.5"/>
+<text x="480" y="747" text-anchor="middle"
+  font-family="Georgia, serif" font-size="8" letter-spacing="3.5"
+  fill="rgba(140,135,195,0.38)">THE FOUR FOUNDATIONS ARE THE TERRAIN</text>
+<text x="480" y="762" text-anchor="middle"
+  font-family="Georgia, serif" font-size="8" letter-spacing="3.5"
+  fill="rgba(140,135,195,0.38)">THE FIVE MOVEMENTS ARE THE MAP</text>
+
+</svg>
+</div>
+</body>
+</html>

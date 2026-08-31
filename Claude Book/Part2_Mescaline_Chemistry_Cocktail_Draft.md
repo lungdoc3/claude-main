@@ -1,0 +1,19 @@
+# A Cocktail, Not a Compound
+
+*Part 2: The Substances — Mescaline chapter, aside*
+*Status: Draft, Critic-reviewed (Excellent after revision)*
+*Pairs with the bridge piece, "Mescaline and the Distant Cousins Who Never Met"*
+
+---
+
+The molecule the last piece kept calling "the same medicine" was never traveling alone. Both San Pedro and peyote produce mescaline as their headline compound, but neither plant hands it to you by itself. Each one ships it inside a small chemical entourage, and at least two members of that entourage are worth knowing by name.
+
+Start with mescaline itself, since it does the majority of the work. It acts on the same 5-HT2A receptor sites as LSD, psilocybin, and DMT, the shared mechanism underneath every classic psychedelic in this book. What it produces once it gets there is its own thing entirely, a genuinely strange blend of stimulation and calm running at the same time, neither one cancelling the other out.
+
+Here's a fact about mescaline that still catches me off guard every time I think about it. There is no established lethal dose for mescaline in humans, low or high. Nobody has ever published a single documented case of a fatal overdose. The number that gets cited, somewhere in the range of 800 to 900 milligrams per kilogram, comes entirely from rodent studies, extrapolated because the human data simply doesn't exist to extrapolate from. Translate that rodent number to a person and you're looking at something like a hundred capsules of pure mescaline before you'd even be in lethal-dose territory. That's not permission to be careless. The danger in this work was never the chemical's lethality, it's everything this book has already spent pages on, dose, container, preparation, who's in the room. But it's a remarkable thing to be able to say about a psychedelic, and it deserves to be said plainly.
+
+Mescaline isn't working alone in there either. Riding along with it in most sacred cacti is hordenine, a much weaker compound that inhibits a different enzyme, MAO-B, and seems to take some of the edge off mescaline's psychedelic effect rather than adding to it. Cannabis runs the same trick with CBD softening what THC does. Coffee runs it too, theobromine quietly keeping caffeine's effect on the heart in check. Nature builds brakes into the same plant that builds the engine often enough that it stops looking like coincidence.
+
+The third member of the entourage is the one worth actually paying attention to before a ceremony. Tyramine can't cross the blood-brain barrier on its own, which sounds reassuring until you learn what it does instead. It muscles its way into the space between neurons and shoves out norepinephrine, which can cross that blood-brain barrier, and norepinephrine then goes on to raise heart rate and sharpen attention, occasionally hard enough to cause real vasoconstriction. This is the same chemistry behind the dietary restrictions already familiar from the ayahuasca chapter, the reason aged cheese and cured meats get cut before ceremony. It isn't unique to grandmother. Tyramine shows up here too, in the same plant family that's supposed to be the gentle one.
+
+So what looks like one medicine on the label is closer to three spirits cooperating, and occasionally working against each other, inside a single plant, mescaline doing the driving, hordenine riding the brake, tyramine adding its own quiet pressure from the side. There's a strange footnote worth sitting with before we move on. The peyote people and the San Pedro people, as the last piece pointed out, never met. Their chemistry eventually did. Research into mescaline helped crack open the door to the broader phenethylamine chemistry that, decades later, gave the world MDMA. The traditions stayed separated by an ocean and a few thousand years. The molecules found their way into the same room eventually anyway.

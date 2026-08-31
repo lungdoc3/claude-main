@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "3f42122377f9231b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c5169594048f32d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7585725741bdcb45",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "beed3befb05c7d5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "53d26379ec409eea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9f054d79c730746",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c7f36c0607575eff",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d2cece58111464a1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 469.5
+  },
+  "right": {
+    "id": "e00af51b13b99635",
+    "type": "split",
+    "children": [
+      {
+        "id": "40838778da60f0cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "124c31c5c9d032c1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "9d665290901794f8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7af00d2ca6a84b5c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d2cf3b6ffcde2737",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3d21c941d58f0136",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "7585725741bdcb45",
+  "lastOpenFiles": [
+    "~$EX Protocol - Concept - Unit Neural Optimization - Working Draft.docx",
+    "APEX Protocol - Concept Paper - Working Draft.md",
+    "APEX Protocol - Research - Funding Landscape - Working Draft.md",
+    "~$APEX Protocol - Concept Deck.pptx",
+    "APEX Protocol - Research - Military Readiness Literature - Working Draft.md",
+    "APEX Protocol - Research - Performance Markers - Working Draft.md",
+    "APEX Protocol - Research - Monitoring Gaps Analysis - Working Draft.md",
+    "APEX Protocol - Research - Neuroplasticity Interventions - Working Draft.md",
+    "APEX Protocol - Operator Syndrome Deep Dive - Working Draft.md",
+    "~$EX PROTOCOL - research.docx",
+    "APEX PROTOCOL - research.docx",
+    "Legacy sources/Brain trickery.pdf",
+    "Legacy sources/Anthony_Black_study.pdf",
+    "Legacy sources/268.Nichols2016Psychedelics-2.pdf"
+  ]
+}

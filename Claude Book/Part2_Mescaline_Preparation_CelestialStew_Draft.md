@@ -1,0 +1,17 @@
+# A Celestial Stew
+
+*Part 2: The Substances — Mescaline chapter, aside*
+*Status: Draft, built from Randy's preparation notes, Critic-reviewed (Excellent)*
+*Pairs with the chemistry piece and anticipates the dosing variability theme already established in the psilocybin chapter*
+
+---
+
+The first thing that goes is the skin. A curandero takes a length of San Pedro, the waxy green outer layer and the spines, and works it away until what's left is the pale flesh underneath. Then the cutting starts, and this is the part that stops people the first time they see it. Sliced thin, the log comes apart into perfect little stars, four to twelve points depending on the specimen, vivid green and gold and white in cross section. Most San Pedro carries six or seven ribs. The rarest carries four, the variety known as the four winds, and it's the one every serious Wachumero wants in their pot, the one considered the most potent of all of them.
+
+Drop those star-shaped slices into a pot of boiling water and you get something that earns its name honestly. The stars spread and float and turn slowly in the water, and if the cuts are thin enough and the pot wide enough, what's looking back at you from the surface is unmistakably a sky. People who have sat with this medicine for years still call it a celestial stew, and the image isn't decoration. It sits right alongside the feeling that shows up in ceremony itself, that something universe-sized is present and actually communicating, not metaphorically, through the plant boiling in front of you.
+
+What's actually happening underneath the imagery is an extraction. The medicine bleeds slowly out of the flesh and into a thickening, viscous liquid the old hands just call the goo. That liquid gets poured off and saved, and the same slices go back in for another round of water and heat. Some curanderos do this seven times, a number with its own weight in the tradition. Others just watch the water and stop once it finally runs clear, which in practice tends to land somewhere around the third or fourth wash. Either way, this is also where the ceremony quietly starts before anyone has had a sip. A curandero singing into the pot, speaking to the spirit of the cactus directly, setting an intention for this specific batch while stirring the stars under the surface, all of that is medicine work too, not preamble to it. And if other plants go into the pot during this stage, the brew stops being San Pedro at all. It becomes cimora, a different sacrament with a different name, the moment something else joins it in the water.
+
+Once the rinses are done, what's left gets filtered and reduced down again until it reaches whatever strength that particular curandero is aiming for. The spent plant material gets discarded. The liquid waits in its container until the moment in ceremony calls for it. And here's the part worth sitting with if you've read the dosing pieces elsewhere in this book. The same plant, prepared by two different hands, can end up served in doses ranging from one ounce to a full liter. That's not a rounding error. That's an entire order of magnitude of difference, depending entirely on who stood over the pot. A dose was never going to be a dose here either.
+
+What happens after that first sip is its own divergence. Some ceremonies hold complete silence, a room that doesn't move for hours. Others run for half the night on song and drumming and dance. The brewing is where the medicine gets made. What gets done with it once it's in the body was never going to be just one thing.

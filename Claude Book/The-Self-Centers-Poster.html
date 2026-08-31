@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Self-Centers — One Night Only</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 48px 20px;
+}
+
+/* ── POSTER SHELL ─────────────────────────────────────────────────────── */
+.poster {
+  width: 680px;
+  background: #f5ead8;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px #1a0a2e, 0 0 0 10px #d4a017, 0 0 80px rgba(0,0,0,0.9);
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Aged paper texture overlay */
+.poster::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 50;
+  mix-blend-mode: multiply;
+}
+
+/* ── TOP DARK BAND ────────────────────────────────────────────────────── */
+.top-band {
+  background: #14082a;
+  padding: 16px 40px 14px;
+  text-align: center;
+  position: relative;
+}
+
+.top-band::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #14082a, #d4a017 30%, #8b1a1a 50%, #d4a017 70%, #14082a);
+}
+
+.top-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: #d4a017;
+  text-transform: uppercase;
+}
+
+/* ── BURST BACKGROUND ─────────────────────────────────────────────────── */
+.burst-section {
+  background:
+    radial-gradient(ellipse at 50% 50%, #1a0828 0%, #0d0520 100%);
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* SVG sunburst lines */
+.burst-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(212,160,23,0.06) 0deg,
+    rgba(212,160,23,0.06) 1deg,
+    transparent 1deg,
+    transparent 6deg
+  );
+  pointer-events: none;
+}
+
+.main-act-block {
+  position: relative;
+  z-index: 2;
+  padding: 34px 40px 28px;
+  text-align: center;
+}
+
+.presents-line {
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #d4a017;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.main-act {
+  font-family: 'Oswald', sans-serif;
+  font-size: 86px;
+  font-weight: 700;
+  color: #f5ead8;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 0.9;
+  text-shadow: 3px 3px 0 #8b1a1a, 6px 6px 0 rgba(0,0,0,0.4);
+}
+
+.the-word {
+  font-size: 42px;
+  letter-spacing: 16px;
+  display: block;
+  margin-bottom: -8px;
+  font-weight: 300;
+  text-shadow: none;
+  color: #c8b89a;
+}
+
+.act-subtitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #d4a017;
+  letter-spacing: 1px;
+  margin-top: 14px;
+}
+
+/* ── GOLD RULE ────────────────────────────────────────────────────────── */
+.rule-gold {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4a017 15%, #8b1a1a 50%, #d4a017 85%, transparent);
+  margin: 0 40px;
+}
+
+.rule-thin {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a017 20%, #d4a017 80%, transparent);
+  margin: 0 60px;
+}
+
+/* ── LINEUP SECTION ───────────────────────────────────────────────────── */
+.lineup-block {
+  background: #f5ead8;
+  padding: 28px 50px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.supporting-label {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #8b6a40;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.support-act {
+  font-size: 34px;
+  font-weight: 700;
+  color: #14082a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.support-act.self-part {
+  color: #8b1a1a;
+}
+
+.connector {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #8b6a40;
+  letter-spacing: 2px;
+  margin: 8px 0;
+  display: block;
+}
+
+.headliner-label {
+  font-size: 10px;
+  letter-spacing: 6px;
+  color: #8b1a1a;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.headliner {
+  font-size: 58px;
+  font-weight: 700;
+  color: #14082a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 0.95;
+}
+
+.headliner .self-part {
+  color: #8b1a1a;
+}
+
+/* ── DARK BAND MIDDLE ─────────────────────────────────────────────────── */
+.mid-dark {
+  background: #1a0828;
+  padding: 14px 50px;
+  text-align: center;
+}
+
+.featuring-line {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #8b7060;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.band-members {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.member {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4a017;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.member-role {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #8b7060;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.member-sep {
+  color: #4a2a5a;
+  margin: 0 12px;
+  font-size: 13px;
+  align-self: center;
+}
+
+/* ── SUPPORTING CAST ──────────────────────────────────────────────────── */
+.supporting-cast {
+  background: #f5ead8;
+  padding: 18px 50px 16px;
+  text-align: center;
+  border-top: 1px solid #d4c4a0;
+  border-bottom: 1px solid #d4c4a0;
+}
+
+.cast-label {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: #8b6a40;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.cast-list {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a2010;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 2.0;
+}
+
+.cast-list span {
+  margin: 0 6px;
+  white-space: nowrap;
+}
+
+.cast-list .sep {
+  color: #d4a017;
+  font-weight: 300;
+}
+
+/* ── VENUE BLOCK ──────────────────────────────────────────────────────── */
+.venue-block {
+  background: #14082a;
+  padding: 22px 50px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.one-night {
+  font-size: 9px;
+  letter-spacing: 7px;
+  color: #d4a017;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.venue-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f5ead8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.venue-sub {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #8b7060;
+  margin-top: 6px;
+}
+
+.show-time {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-block {
+  text-align: center;
+}
+
+.time-label {
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #6a4a7a;
+  text-transform: uppercase;
+  display: block;
+}
+
+.time-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4a017;
+  letter-spacing: 2px;
+}
+
+.time-sep {
+  width: 1px;
+  height: 30px;
+  background: #3a1a4a;
+}
+
+/* ── PROCEEDS / TAGLINE ───────────────────────────────────────────────── */
+.tagline-block {
+  background: #8b1a1a;
+  padding: 12px 50px;
+  text-align: center;
+}
+
+.tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #f5d8d0;
+  letter-spacing: 0.5px;
+}
+
+/* ── FINE PRINT ───────────────────────────────────────────────────────── */
+.fine-print {
+  background: #f5ead8;
+  padding: 16px 50px 20px;
+  text-align: center;
+  border-top: 3px solid #14082a;
+}
+
+.fine-1 {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b6a40;
+  margin-bottom: 8px;
+}
+
+.fine-2 {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 10.5px;
+  color: #3a2010;
+  line-height: 1.8;
+}
+
+.no-refunds {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-top: 10px;
+}
+
+/* ── BOTTOM BAND ──────────────────────────────────────────────────────── */
+.bottom-band {
+  background: #14082a;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-text {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #4a2a5a;
+  text-transform: uppercase;
+}
+
+.bottom-center {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #d4a017;
+  font-weight: 700;
+}
+
+/* ── DECORATIVE ORNAMENT ──────────────────────────────────────────────── */
+.ornament {
+  color: #d4a017;
+  font-size: 18px;
+  letter-spacing: 8px;
+  text-align: center;
+  display: block;
+  margin: 4px 0;
+  opacity: 0.7;
+}
+
+.diamond {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #d4a017;
+  transform: rotate(45deg);
+  margin: 0 6px;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+  <!-- TOP BAND -->
+  <div class="top-band">
+    <div class="top-label">Your Default Mode Network Proudly Presents</div>
+  </div>
+
+  <!-- MAIN ACT BURST -->
+  <div class="burst-section">
+    <div class="main-act-block">
+      <div class="presents-line">One Night Only</div>
+      <div class="main-act">
+        <span class="the-word">The</span>
+        Self-Centers
+      </div>
+      <div class="act-subtitle">A Night of Uninterrupted Self-Reference</div>
+    </div>
+  </div>
+
+  <div class="rule-gold"></div>
+
+  <!-- LINEUP -->
+  <div class="lineup-block">
+    <div class="supporting-label">Opening Act</div>
+    <div class="support-act"><span class="self-part">Self-</span>Sabotage</div>
+
+    <span class="connector">— opening for —</span>
+
+    <div class="support-act" style="font-size:46px;"><span class="self-part">Self-</span>Loathing</div>
+
+    <span class="connector">— with very special guest —</span>
+
+    <div class="headliner-label">Headlining</div>
+    <div class="headliner"><span class="self-part">Self-</span>Righteous</div>
+  </div>
+
+  <!-- BAND MEMBERS DARK BAND -->
+  <div class="mid-dark">
+    <div class="featuring-line">Featuring</div>
+    <div class="band-members">
+      <div class="time-block" style="text-align:center;">
+        <span class="member">Self-Defeating</span>
+        <span class="member-role" style="display:block; color:#6a4a7a;">on bass</span>
+      </div>
+      <div class="member-sep">&nbsp;/&nbsp;</div>
+      <div class="time-block" style="text-align:center;">
+        <span class="member">Self-Fulfilling</span>
+        <span class="member-role" style="display:block; color:#6a4a7a;">on drums</span>
+      </div>
+      <div class="member-sep">&nbsp;/&nbsp;</div>
+      <div class="time-block" style="text-align:center;">
+        <span class="member">Self-Doubt</span>
+        <span class="member-role" style="display:block; color:#6a4a7a;">on lead guitar</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-gold"></div>
+
+  <!-- SUPPORTING CAST -->
+  <div class="supporting-cast">
+    <div class="cast-label">Also Appearing Throughout the Evening</div>
+    <div class="cast-list">
+      <span>Self-Criticism</span><span class="sep"> · </span>
+      <span>Self-Deception</span><span class="sep"> · </span>
+      <span>Self-Pity</span><span class="sep"> · </span>
+      <span>Self-Loathing II</span><span class="sep"> · </span>
+      <span>Self-Comparison</span>
+      <br>
+      <span>Self-Destruction</span><span class="sep"> · </span>
+      <span>Self-Limiting</span><span class="sep"> · </span>
+      <span>Self-Suppression</span><span class="sep"> · </span>
+      <span>Self-Censorship</span>
+      <br>
+      <span>Self-Delusion</span><span class="sep"> · </span>
+      <span>Self-Medication</span><span class="sep"> · </span>
+      <span>Self-Perpetuating</span><span class="sep"> · </span>
+      <span>Self-Defeating (acoustic set)</span>
+    </div>
+  </div>
+
+  <div class="rule-gold"></div>
+
+  <!-- VENUE -->
+  <div class="venue-block">
+    <div class="one-night">Venue</div>
+    <div class="venue-name">The Door of Your Own Mind</div>
+    <div class="venue-sub">Admission is free. Escape is not.</div>
+
+    <div class="show-time">
+      <div class="time-block">
+        <span class="time-label">Doors Open</span>
+        <span class="time-value">Always</span>
+      </div>
+      <div class="time-sep"></div>
+      <div class="time-block">
+        <span class="time-label">Show Starts</span>
+        <span class="time-value">3:00 AM</span>
+      </div>
+      <div class="time-sep"></div>
+      <div class="time-block">
+        <span class="time-label">Runs Until</span>
+        <span class="time-value">∞</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAGLINE -->
+  <div class="tagline-block">
+    <div class="tagline">All proceeds benefit Self-Preservation &nbsp;·&nbsp; The management assumes no responsibility for insight, dissolution, or narrative collapse</div>
+  </div>
+
+  <!-- FINE PRINT -->
+  <div class="fine-print">
+    <div class="fine-1">Important Information for Ticket Holders</div>
+    <div class="fine-2">
+      Tickets available at the door of your own mind. Payment accepted in rumination, regret, and
+      unresolved childhood programming. Seating is assigned by your earliest memories.
+      The management reserves the right to loop any portion of the program indefinitely.
+      Support acts may continue long after the headliner has left the building.
+      <br>
+      This performance has been running nightly since approximately age two.
+    </div>
+    <div class="no-refunds">No Refunds &nbsp;·&nbsp; You Already Paid</div>
+  </div>
+
+  <!-- BOTTOM BAND -->
+  <div class="bottom-band">
+    <div class="bottom-text">A Default Mode Production</div>
+    <div class="bottom-center"><span class="diamond"></span> Est. Childhood <span class="diamond"></span></div>
+    <div class="bottom-text">© Your Brain · All Rights Reserved</div>
+  </div>
+
+</div>
+
+</body>
+</html>
