@@ -16,6 +16,14 @@ One page: who Randy is, what he's building, how he works, how he decides. The fu
 - `Claude Shorts/`: The Quadriune animated educational series.
 - `Claude Somatic/`: The felt sense as a communication channel, the carbon / silicon interface question, and somatic education. Start with `Claude Somatic/_START_HERE.md`.
 
+## Rules of engagement
+
+`/Users/randallevans/Claude MAIN/RULES-OF-ENGAGEMENT.md`
+
+The working agreement: what the models owe Randy, what Randy owes them, the archive architecture, volume caps, and the standing obligations. Read it before working with him for the first time, and follow it without being asked.
+
+---
+
 ## Where things go
 
 Filing rules. Follow them without asking. They exist so that nothing has to be remembered at the moment of creation.
