@@ -6,7 +6,7 @@
 ## The Project
 **The felt sense as a communication channel, and what changes once a system can work with it.**
 Randy alone at this stage. One collaboration conversation opened (see step 7).
-Status: premise established, first major correction made, method identified, nothing built.
+Status: premise established, first major correction made, method identified, best-practice survey complete (31 Aug 2026), nothing built.
 
 ---
 
@@ -63,19 +63,25 @@ This is neurofeedback where the signal is the felt sense and the completion is t
 
 ## Where The Instruments Sit
 
-*Working hypothesis, not an established principle. Nobody on this project has surveyed current best practice in somatic or interoceptive training, and this needs settling before anything gets built on it.*
+*Answered 31 August 2026 by `best-practice-survey.md` in this folder. Read that file for evidence and citations.*
 
-**The hypothesis:** silicon on the boundaries, carbon in the middle. Nothing on screen during the felt sense event. Capture before and after, score later, review much later.
+**The question was wrong.** It was posed as timing and frequency: how often should the display appear, and how close to the moment. Frequency is not the causal variable. A 2022 meta-analysis (75 effect sizes, N = 2,228) found no benefit to reduced feedback frequency at any timepoint and no trace of the predicted reversal. Faded schedules failed as a moderator. The authors told practitioners to stop taking recommendations on feedback frequency.
 
-**The argument for it.** The capacity being trained is non-conceptual and measurement is a conceptual act. Gendlin names "trying to figure it out" as the characteristic beginner failure. An instrument present during the moment is one more invitation into the head.
+**The causal variable is whether the learner commits to a guess before the reading arrives.** In a 2x2 crossing error estimation with feedback frequency, 100% feedback was the *best* condition when the learner had to commit to an internal judgment first, and the *worst* condition when they did not. Frequency was a noisy proxy for whether error estimation was happening at all, which is why frequency effects meta-analyze to zero.
 
-**The argument against it.** The entire biofeedback tradition runs the other way. HRV biofeedback, neurofeedback, and heartbeat-detection training all put a real-time signal in front of the person deliberately, and parts of that literature have evidence behind them. A novice may need an external pointer to know where to look at all.
+So the probe-first ordering in The System Test below is correct, for a reason this file previously got wrong. The reason is not that instruments in the room invite intellectualizing. The reason is that a reading arriving before a committed guess removes the only event that produces learning.
 
-**Possible resolution, untested.** Real-time feedback helps at the floor and hurts at the ceiling. Scaffold, then fade. That is ordinary instructional design, and it would make the answer a schedule rather than a rule. It would also fit the two-populations problem noted further down.
+**A second literature reaches the same place by a different route.** Specificity of practice: more practice under vision made movements *more* dependent on vision, not less. Learning does not migrate out of the sensory conditions of acquisition. If the goal state is unaided interoception, a substantial share of practice must occur unaided.
 
-**Correction to an earlier version of this file,** which claimed this constraint had "shown up three separate times from three different directions" and should therefore be treated as the project's design rule. Those three were the same line of reasoning applied three times inside one conversation. Convergence of one argument with itself is not evidence.
+**What remains genuinely open.** Concurrent feedback benefits learning on complex tasks via load reduction, and degrades it on simple ones. The felt sense is motorically trivial and perceptually hard, and the moderator was derived from motor complexity. A display may be needed early to solve the discrimination problem, which sensation is the target. That job is short and ends as soon as the learner can find the signal.
 
-**Corollary, inheriting the same uncertainty:** sampling may want to be event-triggered rather than clock-triggered, since scheduled pings are a direct assault on the world of no time. The body says when.
+**Fade on measured accuracy, never on a schedule.** Withdrawal pace must match current expertise; adaptive fading beats fixed fading. This system generates its own fading signal for free: the running error between the learner's committed estimate and the sensor reading. Collect subjective effort ratings alongside accuracy, which is what separates real schema development from performance that merely looks adequate.
+
+**The warning that should carry most weight.** Under cockpit automation, pilots' psychomotor skills survived four months of disuse largely intact. Their interpretive skills collapsed: reading state from raw indications, knowing what follows. Only 1 of 16 navigated error-free without the map display. Degradation correlated with mind-wandering during automated flight, meaning a display does not only substitute for the skill, it withdraws attention from the signal. **This project trains an interpretive skill. Passive exposure with a display running does not count as practice.**
+
+**Retention and deployment are separate problems.** Faded gait biofeedback produced no spontaneous retention at 6 months, yet a single verbal cue recovered a 32% reduction in impact loading. The representation was intact and durable. The learner never invoked it. Fading addresses retention. Only cue and context design addresses deployment.
+
+**Corollary, still standing:** sampling may want to be event-triggered rather than clock-triggered, since scheduled pings are a direct assault on the world of no time. Note the tension: the granularity statistic requires signal-contingent sampling. A parallel event-contingent stream, analyzed separately, is the compromise.
 
 ---
 
@@ -133,7 +139,7 @@ The loop that turns the monitor into a teacher, rewritten after the correction s
 
    *On the observer problem.* The labeler is both a requirement and a guarantee that the state is no longer the base state. If the system runs continuously, though, watched becomes the operating condition, no decision gets made in the unwatched state again, and observation is constant across every stored state so it cancels out of the comparison. Design implications: continuous and silent rather than episodic and announced, since reactivity to self-monitoring habituates; and measurement separated from labeling, so the act of labeling never lands inside the moment being labeled.
 
-2. **What is current best practice for training this skill?** Unsurveyed, and it is a prerequisite rather than a nice-to-have. The relevant bodies of work: Focusing and its partnership model, Somatic Experiencing, Hakomi, Feldenkrais, MBSR body scan, Mindful Awareness in Body-oriented Therapy, interoceptive exposure, and the biofeedback and neurofeedback traditions. Two questions to answer from that survey: what actually produces gains in interoceptive awareness, and where do practitioners put instruments relative to the moment. Everything in "Where The Instruments Sit" above is provisional until this is done.
+2. **What is current best practice for training this skill?** **ANSWERED** by `best-practice-survey.md`, 31 August 2026. Headlines: six independent traditions agree that nobody says "just notice your body" (every one supplies an amplifier or anchor first), that vocabulary is taught rather than assumed, that contrast beats absolute detection, and that dose converges on 8 weekly sessions. MABT is the manualized model worth adapting. Blood Glucose Awareness Training is this project's architecture already built and validated in medicine, with 12-month durability. And Gendlin named the instrument specification in 1978 (sigh, facial loosening, postural relaxation) and ran a GSR study of the felt-sense mode in 1961 that has never been replicated.
 
 3. **Specificity of the signal.** Arousal reads as arousal. Hunger, caffeine, anger, and excitement can look alike across HRV and facial action units. Under the corrected frame this may not matter, since the machine only needs to say *something is here* and the carbon system supplies the rest.
 
@@ -143,7 +149,9 @@ The loop that turns the monitor into a teacher, rewritten after the correction s
 
 6. **Where the body enters the Quadriune model.** The reptilian layer in `Claude Brain/` does threat and survival with no afferent body attached to it. The somatic channel may be the missing input, which would make these two projects one project.
 
-7. **Has anyone put physiological instrumentation on Focusing sessions?** If the answer is no, that is a small, cheap, fundable study, and it is the empirical foundation for everything downstream.
+7. **Has anyone put physiological instrumentation on Focusing sessions?** **ANSWERED: no.** Verified absence across English and Japanese sources, TIFI's own research pages, and its roughly 100-dissertation database spanning 13 countries and 1971 to 2024. The systematic review of interpersonal physiology in psychotherapy does not mention Gendlin, Focusing, or experiential therapy at all. The two literatures have never intersected. Exceptions: Gendlin & Berlin 1961 (GSR, N = 17, never replicated), its unpublished companion, one unverified 1977 EEG report, and Rieko Kurino in Japan, the only active researcher on this. The study is small, cheap and fundable. See `best-practice-survey.md` section 6.
+
+8. **New, from the survey.** Screening and branching for hypo- versus hyper-perceivers (the alexithymia relationship is quadratic, not linear). Active harm monitoring with a dissociation protocol that overrides "just notice it." A sampled-but-untrained control arm, because measurement alone raises emotional clarity. Explicit defense against base-rate inference, which is the specific way this design will produce apparent skill that is not perceptual. And the granularity index itself is more fragile than assumed: children score high on it, which vocabulary accounts cannot explain.
 
 ---
 
@@ -151,6 +159,7 @@ The loop that turns the monitor into a teacher, rewritten after the correction s
 - `Claude Brain/`: the holarchical agent structure in step 2 is the same architecture, and open question 5 is a live seam between the two.
 - `Claude Book/`: the felt sense chapter, written as a direct result of this thinking.
 - `gendlin-primer.md`: the prior art, in depth.
+- `best-practice-survey.md`: what the evidence supports, what it overturns, and the two named people worth contacting.
 
 ---
 
