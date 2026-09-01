@@ -71,6 +71,38 @@ A display showing all current values transmits almost nothing while costing cont
 
 The delta engine already had this instinct. **The delta is the information. The absolute readings are not.**
 
+#### Surprise is computable per message
+
+Self-information: **I(x) = -log2 p(x)**. The information carried by a specific message is the negative log of its probability. Unlike entropy, which is an average over a distribution, this is a number for a single event. Every possible reading can therefore be ranked by how much it would actually tell this receiver, and attention allocated against that ranking.
+
+#### The log shape, and what it forecloses
+
+Halving a probability adds exactly one bit, whether the move is from 0.5 to 0.25 or from 0.001 to 0.0005.
+
+So the informational distance between *expected* and *unusual* is enormous, and the distance between *unusual* and *very unusual* is close to nothing.
+
+**Almost all available information sits in the first departure from expectation.** Every gradation after that is rounding error dressed as urgency.
+
+#### Worked example: alarm fatigue is a coding failure
+
+A clinical monitor encodes many tiers of urgency into a channel where the informational difference between the eighth tier and the twelfth is under a bit. Meanwhile the commonly cited false-alarm range in clinical monitoring runs from roughly 70 percent to well above 90, varying by unit and study.
+
+Run the arithmetic. If an alarm fires and nothing is wrong nine times in ten, p(alarm) is high, so I(alarm) is near zero. The alarm carries almost no information at the moment it sounds.
+
+**A clinician who stops responding is computing correctly.** That is accurate Bayesian updating performed on a channel that misrepresented its own probabilities.
+
+This reframes the standard account. Alarm fatigue is usually described as a human failure calling for training, vigilance or discipline. It is a coding failure, and the receiver is the only component of the system behaving properly.
+
+It also rules out most of what gets tried. Volume, color, urgency styling, an additional escalation tier: each attempts to add information to a message that has none. **The only repair is changing p**, which means changing the conditions under which the thing fires.
+
+#### And this is why the felt sense works without an alphabet
+
+The felt sense is a surprisal detector. It does not identify a state, it registers a departure from an expected one.
+
+That is precisely why it operates where Shannon's framework struggles. **An enumerable message set is required to measure information about *which* message arrived. It is not required to notice that something is not as it was.**
+
+Which makes "something is here," with meaning left to the carbon system, the correct division rather than a compromise. Departure is the part a machine can compute. Identity is not.
+
 ### 2. The channel-payload mismatch
 
 The output of a degradation monitor is roughly one bit. Something changed, or it did not.
