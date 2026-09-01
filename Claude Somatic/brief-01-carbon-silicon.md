@@ -69,6 +69,8 @@ Use these if they help. Discard them if they distort. Propose better ones if you
 
 **Ledger accounting.** Per capacity: what the pairing adds, what it subtracts, whether the subtraction was chosen or drifted into, and what happens when the tool is absent.
 
+**Information theory.** Shannon set meaning aside in 1948 and built a complete theory of communication on what remained, which is the same constraint this inquiry arrived at independently. Weaver's three levels locate the problem: Level A, technical accuracy of transmission, is solved. Level B, semantic precision, and Level C, effect on conduct, have been open for 77 years. Relevant results include the data processing inequality (post-processing cannot create information), mutual information as a semantics-free measure of coupling between two systems, source coding (short codes for frequent messages), and rate-distortion (what compression costs depends entirely on the distortion measure chosen). Limits worth stating: Shannon's measure needs an enumerable message set, assumes sender and receiver share a codebook, and treats surprise rather than value. This is the only candidate vocabulary here with theorems. See `information-theory-and-presentation.md`.
+
 ---
 
 ## Assigned stance
