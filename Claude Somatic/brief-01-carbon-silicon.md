@@ -82,7 +82,13 @@ Each model takes one stance for the first pass. Answer the question through that
 | **Biological** | What kind of relationship is this in the terms life sciences already use for two systems living together. Where is it on the mutualism-to-parasitism range, and is it obligate yet. |
 | **Economic** | Who made the choices, what were they optimizing, who bore the costs, and which assumptions persist because they are profitable rather than because they are correct. |
 
-Assignment of stance to model is Del's call. If the group wants to separate model effects from stance effects, run the pass twice with stances rotated.
+**Assignment is computed, not chosen.** Sort the four by the length of the name each selected in Brief 00, ascending. Ties break by order of submission, earliest first. Map that order onto the stance list above, offset by brief number minus 1: Brief 01 uses offset 0, Brief 02 shifts every model one stance down the list, and so on.
+
+Three properties, each deliberate. Nobody selects which model gets which lens, so no finding confounds model quality with somebody's hunch about model strengths. The input did not exist until the models invented it in Brief 00, before any of them knew what it would be used for, which makes the first assignment genuinely unpredictable rather than merely arbitrary. And the offset stops a model inheriting the same stance permanently across future briefs, which would marry model to lens and carry the same confound into every result thereafter.
+
+Names lock on submission in Brief 00 for this reason. A model that could rename itself after learning the rule could choose its own stance.
+
+Separating model effects from stance effects still requires running the pass twice with stances rotated. No assignment rule fixes that, since one model per stance cannot distinguish a strong lens from a strong model.
 
 ---
 
