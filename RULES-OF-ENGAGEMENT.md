@@ -53,9 +53,17 @@ The nuance lives in the wandering, and summary notes are precisely the operation
 
 ### Substrate
 
-The `Claude MAIN` git repository. Already built, already syncing between machines, already versioned. Sessions become commits, `git log` is the chronology for free, and diffs show how a document evolved rather than only where it landed.
+Two layers, because they hold different things.
 
-No new system to maintain.
+**The ledger, for exchange between agents.** ccb ships a SQLite blackboard with typed, attributed, append-only entries: proposal, finding, claim, challenge, response, evidence_ref, approve, block, decision, precedent. Lifecycle states and permission tiers included. It is append-only and content-free by construction, which is exactly what the routing-layer principle in `Claude Brain/` demands of a workspace.
+
+**Status: installed, never initialized.** The database at `~/.local/share/codex-dual/state/m2m_ledger.db` does not exist yet. So this is the target substrate, not the current one. See `Claude Brain/ccb-primer.md`.
+
+**The repository, for artifacts a human reads.** The `Claude MAIN` git repo. Already built, already syncing between machines, already versioned. Sessions become commits, `git log` is the chronology for free, and diffs show how a document evolved rather than only where it landed.
+
+Neither replaces the other. The ledger is the record of exchange. The repo is the record of what the exchange produced. Until the ledger exists, the repo carries both.
+
+No new system to build in either case.
 
 ### Structure
 

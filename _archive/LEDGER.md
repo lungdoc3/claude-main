@@ -11,6 +11,7 @@
 - `Claude Somatic/` MVP: primary hypothesis logged (a step, not a slope). Untested.
 - First subjects named (Del, Randy's son). Screen not yet run.
 - Rules of engagement established 31 Aug 2026. Untested against a real multi-agent session.
+- ccb blackboard installed and dormant. Initialization not yet attempted. Blind debate with 4 participants unverified (API reads as a 2-model call).
 
 ## Killed, and why
 
@@ -18,6 +19,7 @@
 - **Scaffold-and-fade as a frequency prescription.** Killed 31 Aug 2026. Rested on the guidance hypothesis, which failed meta-analysis in 2022 across 75 effect sizes. The probe-first ordering survived on different grounds.
 - **Heartbeat counting as an outcome measure.** Killed 31 Aug 2026. 133 studies, null on every psychological construct, significant on heart rate, BMI, sex and age.
 - **The Helen Keller framing.** Killed 31 Aug 2026 by Randy. Imports the wrong problem: Helen was acquiring a channel she lacked, the target population is disinhibiting one they have.
+- **The assumption that the group is reachable only through one agent's chat window.** Killed 1 Sep 2026 by reading the harness. Four independent panes, plus a dormant blackboard with a broadcast primitive restricted to Claude or the cofounder.
 - **Google Drive as the sync mechanism.** Killed 31 Aug 2026. Rejected on his history with it, and because the documents are 1 MB while the folder is 275 MB.
 
 ## Decided
@@ -27,3 +29,4 @@
 - Claude runs the git. Randy does not.
 - Synthesis of multi-agent output stays with Randy and Claude, never with a participant.
 - Archive principle: do not compress, index.
+- ccb is upstream open-source software (bfly123/claude_code_bridge v5.2.6), not Del's build. Corrected in the record 1 Sep 2026.

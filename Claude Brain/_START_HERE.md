@@ -44,7 +44,9 @@ The four agents map directly to Randy's four foundations:
 
 A running multi-agent setup lives on Randy's Mac at `~/.ccb`, driven through WezTerm. Read what it actually is before assuming it implements anything described above.
 
-It is Del's default configuration with DeepSeek added. What runs there is Del's 3 agent system. None of the Quadriune structure is in it: no layer specs, no routing layer, no purpose-built models, no mode switching.
+It is not Del's build. It is Claude Code Bridge (ccb) v5.2.6, open-source software at github.com/bfly123/claude_code_bridge, MIT licensed, with public documentation. Del installed and configured it. Four independent CLI processes in four WezTerm panes: Claude, Codex, Gemini, OpenCode. None of the Quadriune structure is in it: no layer specs, no purpose-built models, no mode switching.
+
+What ccb does contain, installed and dormant, is a SQLite-backed blackboard with typed entries, permission tiers, a broadcast primitive restricted to Claude or the cofounder, and blind debate with a controlled reveal. The ledger database has never been created, so none of it has ever run. See `ccb-primer.md` in this folder.
 
 The Quadriune framework was chosen for two reasons. A non-neuroscientist can hold it in their head, and it mapped cleanly onto the 3 agent system Del already had. It gave Del a shape to think in. That was the point of it: a proof of concept move, scaffolding for shared understanding.
 
@@ -59,6 +61,7 @@ The actual architecture of the Quadriune brain has yet to be sorted. Treat the f
 - `Domain_Specs/README.md` — Placeholder; writing these is the next core task
 - `Claude Shorts/` — Now lives in its own workspace: `/Users/randallevans/Claude MAIN/Claude Shorts/`
 - `Claude Somatic/` — Separate workspace on the felt sense and the carbon / silicon interface. Open problem 6 below is a live seam between the two projects.
+- `ccb-primer.md` — What the harness in `~/.ccb` actually is: upstream software, what is running, and what is installed but never initialized.
 
 ---
 
