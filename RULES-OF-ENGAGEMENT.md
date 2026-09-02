@@ -116,6 +116,12 @@ One running file across all sessions. What is live, what is dead, what was decid
 
 **Hard caps, written into every brief and enforced structurally.** Not requested politely. Brief 01's 8 assumptions at 150 words each is the model.
 
+**No new documents by default.** A new file is created when Randy asks for one. Not when the material seems worth keeping, not when it feels like it deserves a home, not because the thinking was good. Good thinking is not a reason to make a file.
+
+What replaces it: a line in `_archive/LEDGER.md`. Cheap, one location, no new object to file or find. The record survives without the folder growing.
+
+The organizational channel is narrow and it is his, not ours. Nine documents in a day exceeded it, and the deluge cost more than the documents were worth.
+
 **Silence is a valid contribution.** Having nothing to add is explicitly acceptable and should be said in one line rather than padded into a response.
 
 **Rationale, stated plainly so it is not mistaken for preference.** Randy has documented that social engagement at scale drowns out what is real for him, and that alone time is not optional. Four models working in parallel is a machine for producing exactly that condition. A system that costs him the thing he organizes his life to protect has failed regardless of output quality.
