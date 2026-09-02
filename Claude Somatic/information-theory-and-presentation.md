@@ -159,15 +159,47 @@ That is a candidate for the foundational assumption Brief 01 is hunting, and it 
 
 ## Where information theory will not serve
 
-Stated now, so it does not have to be discovered later.
+Three fences. Stated now, with the location of each one marked, so nobody walks into them in month four.
 
-**No enumerable alphabet.** Shannon's measure requires a known set of possible messages. The felt sense has no such set, and defining it is the entire problem rather than a preliminary to it.
+### 1. No enumerable alphabet
 
-**No shared codebook.** Shannon assumes sender and receiver share one. Carbon and silicon do not. What exists is a translation layer imposed on one party in 1965 and never negotiated.
+Entropy is a sum: **H = -Σ p(x) log p(x)**. The sum runs over the set of possible messages. No set, no sum, no number.
 
-That second one may be the finding underneath the whole brief.
+Shannon can price a drawn card because there are 52 and the odds are known. Say "I drew something from a collection of unknown size and composition" and there is no calculation to perform. Not a hard one. None.
 
-**And information is not value.** A random string has maximum entropy and no worth. Surprise is not importance. Any currency built on entropy alone will rank noise above insight, which is why mutual information and not entropy is the candidate above.
+The felt sense has no such set. Gendlin insisted each one is unique to its situation and that a borrowed category word papers over it rather than matching it. The alphabet is not merely undiscovered. **Enumerating it would destroy the thing**, since a felt sense that fits neatly into a predefined category was a category all along.
+
+**Where the fence actually sits:** the information content of a given felt sense is not computable. That a departure occurred is. Detection survives, identification does not.
+
+Which is the same line this project drew for unrelated reasons. Two independent constraints landing in one place is worth noticing.
+
+### 2. No shared codebook
+
+Shannon assumes both ends agree in advance what the symbols mean. Morse works because both ends hold the same table. Without a shared table, transmission is noise arriving on schedule.
+
+Carbon and silicon do share one at the symbol level: text, ASCII, English, pixels. That is why **Level A works fine**. Characters arrive intact.
+
+That codebook was built for the machine's convenience and handed to the human as a condition of entry. The human learned it. The machine never learned the human's. Every exchange pays an encode tax and a decode tax, and the losses compound in both directions.
+
+**The opportunity inside this one:** the idle channels have no codebook yet. Haptic, proprioceptive, interoceptive. Nothing has to inherit the 1965 table for a channel that has never had one, which means those could be negotiated rather than imposed. See `negotiated-codebook.md`.
+
+### 3. Surprise is not value
+
+Maximum entropy means maximum unpredictability, which means random. **A random string is maximally informative by Shannon's measure and worth nothing.**
+
+A smoke detector firing at random times is highly surprising and useless. One firing only during fires is far less surprising in aggregate and infinitely more valuable. A currency built on entropy would rank the noise generator above the instrument.
+
+**The failure mode already exists at scale.** Optimize an interface for surprise with no truth constraint and the result is the attention economy. Engagement maximization is surprise maximization without accuracy, and the output is well documented.
+
+So "send the surprise" is a rule for allocating attention **among messages already known to be true**. As a standalone objective it is catastrophic, because the cheapest route to surprise is to lie.
+
+### The synthesis
+
+The three fences collapse into one instruction:
+
+- **Mutual information** for value. It measures how much a signal tells you about the thing you care about, and a random signal has zero of it with anything.
+- **Self-information** for allocation. Given true messages, spend attention in proportion to surprisal.
+- **Entropy alone** for neither.
 
 ---
 
