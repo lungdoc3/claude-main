@@ -12,6 +12,8 @@
 - First subjects named (Del, Randy's son). Screen not yet run.
 - Rules of engagement established 31 Aug 2026. Untested against a real multi-agent session.
 - ccb blackboard installed and dormant. Initialization not yet attempted. Blind debate with 4 participants unverified (API reads as a 2-model call).
+- Information theory adopted as candidate vocabulary for Brief 01. Mutual information is the leading WAR denominator, still unchosen.
+- Negotiated codebook proposed for the idle channels. Load-bearing open question: does the felt shift fire for an arbitrary symbol pairing, or only for symbolizations of a pre-existing interior state? Untested, and a negative answer invalidates the approach.
 
 ## Killed, and why
 
@@ -29,4 +31,6 @@
 - Claude runs the git. Randy does not.
 - Synthesis of multi-agent output stays with Randy and Claude, never with a participant.
 - Archive principle: do not compress, index.
+- Surprisal allocates attention among true messages. It is never an objective function, since the cheapest route to surprise is to lie, and optimizing for it produces the attention economy.
+- The machine proposes symbols and reads physiological verdicts. It never decides what anything means. This now has three independent supports: the correction of 30 Aug, the absence of autonomic fingerprints across 202 studies, and the data processing inequality.
 - ccb is upstream open-source software (bfly123/claude_code_bridge v5.2.6), not Del's build. Corrected in the record 1 Sep 2026.
