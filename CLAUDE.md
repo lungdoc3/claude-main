@@ -13,6 +13,7 @@ One page: who Randy is, what he's building, how he works, how he decides. The fu
 - `Claude Book/`: "Healing with Psychedelics: A Physician's Perspective." Drafts, personal writings, scientific articles, legacy sources.
 - `Claude Brain/`: The Quadriune Brain, a multi-agent AI architecture. Start with `Claude Brain/_START_HERE.md`.
 - `Claude Context/`: The personal-context portfolio (00-master-briefing.md plus 01 through 10), the voice rules, and the critic protocol. Referenced by everything, owned by nothing.
+- `Claude Interface/`: The carbon-silicon relationship and its foundational assumptions. Home of the House of Del briefs. Start with `Claude Interface/_START_HERE.md`.
 - `Claude Shorts/`: The Quadriune animated educational series.
 - `Claude Somatic/`: The felt sense as a communication channel, the carbon / silicon interface question, and somatic education. Start with `Claude Somatic/_START_HERE.md`.
 

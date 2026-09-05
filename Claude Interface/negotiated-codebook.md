@@ -44,7 +44,7 @@ Propose a handle. Check it against the felt sense. Adjust until it fits. The bod
 
 Which means the method already exists and has 48 years of field refinement behind it. It was never a technique for introspection specifically. It is a general procedure for establishing whether a symbol fits a wordless state, and the wordlessness is the whole reason it is needed.
 
-See `gendlin-primer.md`.
+See `../Claude Somatic/gendlin-primer.md`.
 
 ---
 
@@ -60,7 +60,7 @@ Propose a symbol. Read the body's verdict. Keep or discard. **No semantics anywh
 
 That is Weaver's Level B approached without ever touching meaning, which is the move everyone assumed was unavailable.
 
-It also gives the felt-shift detection work from `best-practice-survey.md` a job that is not research. Detecting the shift stops being an interesting open question and becomes the mechanism that makes codebook negotiation possible at all.
+It also gives the felt-shift detection work from `../Claude Somatic/best-practice-survey.md` a job that is not research. Detecting the shift stops being an interesting open question and becomes the mechanism that makes codebook negotiation possible at all.
 
 ---
 

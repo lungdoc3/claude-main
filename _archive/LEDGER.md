@@ -31,6 +31,7 @@
 - Claude runs the git. Randy does not.
 - Synthesis of multi-agent output stays with Randy and Claude, never with a participant.
 - Archive principle: do not compress, index.
+- The carbon-silicon inquiry split from Claude Somatic into Claude Interface on 5 Sep 2026. It began as the Somatic premise and outgrew it. Somatic keeps the felt sense work; Interface takes the relationship, the briefs, information theory, the negotiated codebook and the language instrument.
 - Surprisal allocates attention among true messages. It is never an objective function, since the cheapest route to surprise is to lie, and optimizing for it produces the attention economy.
 - The machine proposes symbols and reads physiological verdicts. It never decides what anything means. This now has three independent supports: the correction of 30 Aug, the absence of autonomic fingerprints across 202 studies, and the data processing inequality.
 - ccb is upstream open-source software (bfly123/claude_code_bridge v5.2.6), not Del's build. Corrected in the record 1 Sep 2026.

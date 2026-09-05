@@ -179,6 +179,7 @@ The loop that turns the monitor into a teacher, rewritten after the correction s
 - `Claude Brain/`: the holarchical agent structure in step 2 is the same architecture, and open question 5 is a live seam between the two.
 - `Claude Book/`: the felt sense chapter, written as a direct result of this thinking.
 - `gendlin-primer.md`: the prior art, in depth.
+- `../Claude Interface/`: the carbon-silicon relationship, which began as this project's premise and became its own inquiry on 5 September 2026.
 - `best-practice-survey.md`: what the evidence supports, what it overturns, and the two named people worth contacting.
 
 ---
