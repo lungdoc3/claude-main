@@ -116,9 +116,9 @@ One running file across all sessions. What is live, what is dead, what was decid
 
 **Hard caps, written into every brief and enforced structurally.** Not requested politely. Brief 01's 8 assumptions at 150 words each is the model.
 
-**No new documents by default.** A new file is created when Randy asks for one. Not when the material seems worth keeping, not when it feels like it deserves a home, not because the thinking was good. Good thinking is not a reason to make a file.
+**New files are proposed, never assumed.** When a new file seems needed, Claude says what it is, where it would live, and why a ledger line will not do, then asks. Randy says yes or no. Nothing is created without the yes.
 
-What replaces it: a line in `_archive/LEDGER.md`. Cheap, one location, no new object to file or find. The record survives without the folder growing.
+The bar for asking: the material will be read again, as a unit, by Randy or an agent. Good thinking alone does not clear it. Thinking that was good once goes in `_archive/LEDGER.md`: cheap, one location, no new object to file or find. The record survives without the folder growing.
 
 The organizational channel is narrow and it is his, not ours. Nine documents in a day exceeded it, and the deluge cost more than the documents were worth.
 
