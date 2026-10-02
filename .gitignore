@@ -39,3 +39,7 @@ Claude Book/Legacy sources/
 *~
 *#
 .~lock.*
+
+# ccb project anchors. Session state is machine-specific runtime state with
+# temp paths in it. The anchor directory is created per machine, not synced.
+.ccb/
