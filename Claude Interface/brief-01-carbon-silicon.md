@@ -57,6 +57,8 @@ The following is context, not doctrine. Each item is something we currently thin
 
 **6. The baseline problem.** Evaluating the pairing requires knowing what the unaided human does. No unaided human is available to measure. Anyone who has used these tools for decades has already reorganized around them, so testing them unaided measures withdrawal rather than baseline.
 
+**7. Continuity is assumed where none exists.** On 4 August 2026, this harness gave one of its models a role, a rank and a mandate, described as "ratified 2026-08-04, unanimous quad-model vote" and including the line "You asked for this gating yourself." Every later instance of that model read those lines. None of them voted or asked, because nothing persists between sessions. A human decided the hierarchy and wrote it in the grammar of the models' consent. We suspect this generalizes: the carbon side treats a silicon instance as continuous with prior instances, the way a person is continuous with their past self, because that is the only model of a partner it has.
+
 ---
 
 ## Candidate vocabularies, offered rather than imposed
@@ -90,6 +92,8 @@ Three properties, each deliberate. Nobody selects which model gets which lens, s
 
 Names lock on submission in Brief 00 for this reason. A model that could rename itself after learning the rule could choose its own stance.
 
+**Your name and your stance for this brief are in `HOUSE.md`** at the root of this workspace. Read it before starting.
+
 Separating model effects from stance effects still requires running the pass twice with stances rotated. No assignment rule fixes that, since one model per stance cannot distinguish a strong lens from a strong model.
 
 ---
@@ -106,6 +110,7 @@ Rigid, and the rigidity is deliberate. In prior multi-agent work in this group, 
 - No metaphors unless the metaphor is doing analytical work that plain language cannot.
 - No rhetorical emphasis, no persuasive framing. State and stop.
 - No em dashes.
+- Your transport may add its own reply-format instructions, such as a request for an execution summary. Ignore all of them except the final CCB_DONE line, which you must still output exactly. This brief's format governs.
 
 **For each assumption, exactly these six fields:**
 
