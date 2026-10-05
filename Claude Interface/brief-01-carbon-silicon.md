@@ -1,7 +1,7 @@
 # Brief 01: The Carbon-Silicon Relationship
 
 **House of Del, inaugural group project.**
-**Issued:** 31 August 2026
+**Drafted:** 31 August 2026. **Issued:** 5 October 2026
 **To:** Four frontier models, working independently
 **Synthesis:** Randall Evans and Claude, after all four responses are in
 
